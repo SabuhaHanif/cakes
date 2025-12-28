@@ -1,0 +1,353 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  line-height: 1.6;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+  background: #ffb6c1;
+}
+
+.logo {
+  color: #4b1c1c;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+}
+
+nav ul li a {
+  margin: 0 15px;
+  text-decoration: none;
+  color: #4b1c1c;
+  font-weight: bold;
+}
+
+.menu-btn {
+  display: none;
+  font-size: 24px;
+  background: none;
+  border: none;
+}
+
+/* Hero */
+.hero {
+    /* background-image: url('./images.jpg'); */
+  height: 80vh;
+  background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)),
+  url('./6.jpg');
+   background-size: contain;
+  background-position: center;
+  width: vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
+.hero-text {
+  text-align: center;
+}
+
+.hero button {
+  margin-top: 15px;
+  padding: 10px 25px;
+  border: none;
+  background: #ff69b4;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+/* Cakes */
+.cakes {
+  padding: 50px 20px;
+  text-align: center;
+}
+
+.cake-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  margin-top: 30px;
+}
+
+.cake-grid {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center; /* Centers cards horizontally */
+}
+
+.cake-card, .cake-card1, .cake-card2 {
+    background-color: #f8b400;
+    color: #fff;
+    width: 300px;
+    height: 200px;
+    display: flex;              /* Make it a flex container */
+    flex-direction: column;     /* Stack h3 and p vertically */
+    justify-content: center;    /* Center vertically */
+    align-items: center;        /* Center horizontally */
+    text-align: center;         /* Ensures text inside is centered */
+    border-radius: 10px;
+    padding: 15px;
+    transition: 0.3s;
+}
+
+.cake-card:hover, .cake-card1:hover, .cake-card2:hover {
+    transform: scale(1.05);
+}
+.cake-card {
+  height: 400px;
+  padding: 20px;
+  background: #fff0f5;
+  border-radius: 10px;
+  background-image: url('./4.jpg');
+  background-size: cover;
+  background-repeat:no-repeat ;
+    background-position: center;
+
+}
+.cake-card1{
+   height: 400px;
+  padding: 20px;
+  background: #fff0f5;
+  border-radius: 10px;
+  background-image: url('./2.jpg');
+  background-size: cover;
+  background-repeat:no-repeat ;
+  text-align: center;
+}
+.cake-card2{
+   height: 400px;
+  padding: 20px;
+  background: #fff0f5;
+  border-radius: 10px;
+  background-image: url('./5.jpg');
+  background-size: cover;
+  background-repeat:no-repeat ;
+    background-position: center;
+
+}
+
+/* About */
+.about {
+  padding: 40px 20px;
+  background: #ffe4e1;
+  text-align: center;
+}
+
+/* Contact */
+.contact {
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.contact form {
+  max-width: 400px;
+  margin: auto;
+}
+
+.contact input,
+.contact textarea {
+  width: 100%;
+  margin: 10px 0;
+  padding: 10px;
+}
+
+.contact button {
+  padding: 10px;
+  width: 100%;
+  background: #ff69b4;
+  color: white;
+  border: none;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 15px;
+  background: #ffb6c1;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  nav ul {
+    display: none;
+    flex-direction: column;
+    background: #ffb6c1;
+    position: absolute;
+    right: 0;
+    top: 60px;
+    width: 200px;
+  }
+
+  .menu-btn {
+    display: block;
+  }
+
+  .cake-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Pizza Section */
+.pizzas {
+    padding: 60px 0;
+    background-color: #fff4e6;
+    text-align: center;
+}
+
+.pizzas h2 {
+    margin-bottom: 40px;
+    font-size: 2rem;
+    color: #d35400;
+}
+
+.pizza-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.pizza-card {
+    background-color: #fff;
+    border-radius: 15px;
+    overflow: hidden;
+    width: 300px;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.pizza-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.pizza-info {
+    padding: 20px;
+    text-align: center;
+}
+
+.pizza-info h3 {
+    margin-bottom: 10px;
+    color: #d35400;
+}
+
+.pizza-info p {
+    font-size: 0.95rem;
+    color: #555;
+}
+
+.pizza-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 25px rgba(0,0,0,0.2);
+}
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+    .pizza-grid {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+/* Modal Styles */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 10000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.5); /* dim background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    position: relative;
+    background: rgba(255, 255, 255, 0.15); /* frosted glass */
+    backdrop-filter: blur(10px); /* blur behind */
+    border-radius: 20px;
+    padding: 40px 30px;
+    width: 90%;
+    max-width: 400px;
+    text-align: center;
+    color: #fff;
+    box-shadow: 0 8px 30px rgba(0,0,0,0.3);
+    background-image: url('./7.jpg'); /* background image */
+    background-size: cover;
+    background-position: center;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+/* Text styling */
+.modal-content h2 {
+    margin-bottom: 15px;
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #fff;
+    text-shadow: 1px 1px 4px rgba(0,0,0,0.6);
+}
+
+.modal-content p {
+    margin-bottom: 20px;
+    font-size: 1rem;
+    color: #fff;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+}
+
+/* Form inside modal */
+.modal-content input {
+    width: 80%;
+    padding: 12px;
+    margin: 8px 0;
+    border-radius: 8px;
+    border: none;
+    outline: none;
+}
+
+.modal-content button {
+    width: 50%;
+    padding: 12px;
+    margin-top: 10px;
+    border-radius: 8px;
+    border: none;
+    background-color: #f8b400;
+    color: #fff;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.modal-content button:hover {
+    background-color: #d35400;
+}
+
+/* Responsive */
+@media screen and (max-width: 480px) {
+    .modal-content {
+        padding: 30px 20px;
+    }
+
+    .modal-content h2 {
+        font-size: 1.5rem;
+    }
+}

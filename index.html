@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cakery</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Sweet Crumbs | Cake Bakery</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+ <!-- Promo Popup Modal -->
+<div id="promoModal" class="modal">
+    <div class="modal-content">
+        <h2 style="color: rgb(122, 56, 8);">Fresh Desi Ghee & Butter!</h2>
+        <p style="color: rgb(139, 6, 28);">Experience the rich taste of our premium dairy products, made for your kitchen.</p>
+        <form id="locationForm">
+            <input type="text" placeholder="Enter your city" required>
+            <input type="text" placeholder="Enter your location" required>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+</div>
+
+
+  <!-- Navbar -->
+  <header class="navbar">
+    <h1 class="logo">Sweet Crumbs</h1>
+    <nav>
+      <ul id="menu">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#cakes">Cakes</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <button class="menu-btn" onclick="toggleMenu()">☰</button>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero" id="home">
+    <div class="hero-text">
+      <h2>Delicious Cakes Made With Love</h2>
+      <p>Freshly baked cakes for every celebration</p>
+      <button>Order Now</button>
+    </div>
+  </section>
+
+  <!-- Cakes Section -->
+  <section class="cakes" id="cakes">
+    <h2>Our Special Cakes</h2>
+    <div class="cake-grid">
+      <div class="cake-card">
+        <h3>Chocolate Cake</h3>
+        <p>Rich & creamy chocolate delight</p>
+      </div>
+      <div class="cake-card1">
+        <h3>Vanilla Cake</h3>
+        <p>Classic soft vanilla sponge</p>
+      </div>
+      <div class="cake-card2">
+        <h3>Red Velvet</h3>
+        <p>Perfect balance of sweetness</p>
+      </div>
+    </div>
+  </section>
+
+  <br><br>
+
+  <section class="pizzas" id="pizzas">
+    <h2>Our Delicious Pizzas</h2>
+    <div class="pizza-grid">
+        <div class="pizza-card">
+            <img src="https://source.unsplash.com/300x200/?pizza,margherita" alt="Margherita Pizza">
+            <div class="pizza-info">
+                <h3>Margherita Pizza</h3>
+                <p>Classic tomato & mozzarella with fresh basil</p>
+            </div>
+        </div>
+        <div class="pizza-card">
+            <img src="https://source.unsplash.com/300x200/?pizza,pepperoni" alt="Pepperoni Pizza">
+            <div class="pizza-info">
+                <h3>Pepperoni Pizza</h3>
+                <p>Spicy pepperoni with gooey mozzarella</p>
+            </div>
+        </div>
+        <div class="pizza-card">
+            <img src="https://source.unsplash.com/300x200/?pizza,veggie" alt="Veggie Pizza">
+            <div class="pizza-info">
+                <h3>Veggie Pizza</h3>
+                <p>Loaded with fresh vegetables & cheese</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<br><br>
+<!-- About Section -->
+  <section class="about" id="about">
+    <h2>About Us</h2>
+    <p>
+      Sweet Crumbs is a home-based bakery specializing in premium cakes.
+      We use fresh ingredients and bake with passion to make your moments special.
+    </p>
+  </section>
+
+  <!-- Contact Section -->
+  <section class="contact" id="contact">
+    <h2>Contact Us</h2>
+    <form>
+      <input type="text" placeholder="Your Name" required>
+      <input type="email" placeholder="Your Email" required>
+      <textarea placeholder="Your Message"></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 Sweet Crumbs Bakery | All Rights Reserved</p>
+  </footer>
+
+  <script>
+    const modal = document.getElementById("promoModal");
+    const form = document.getElementById("locationForm");
+
+    // Show modal on page load
+    window.onload = () => {
+        modal.style.display = "flex";
+    };
+
+    // Close modal if user clicks outside content
+    window.onclick = (event) => {
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+    };
+
+    // Handle form submission
+    form.onsubmit = (e) => {
+        e.preventDefault();
+        const city = form[0].value;
+        const location = form[1].value;
+        alert(`Thank you! Your city: ${city}, Location: ${location}`);
+        modal.style.display = "none";
+        form.reset();
+    };
+</script>
+
+
+  <script src="script.js"></script>
+</body>
+</html>
